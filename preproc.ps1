@@ -1,6 +1,7 @@
 <#
 Preprocessor for Digispot II "Import from text file" module
 v1.00 2018-08-18 Initial release
+v1.01 2018-08-20 Some fixes. Requre PowerShell >2.0
 
 Command line in import module settings:
 C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -ExecutionPolicy bypass -command "\\your-root-server\ROOT\IMP_FORMATS\preproc.ps1"
@@ -21,6 +22,10 @@ param (
 $inputFile = Get-ChildItem -Path $inputFile
 #$outputFile = $currentdir + "\" + $outputFile
 
+if ($PSVersionTable.PSVersion.Major -le 3) {
+    Write-Host "`n`nThis script requires PowerShell newer than 2.0`nPlease upgrade.`n"
+    Break
+}
 
 $csvFile = $inputFile + ".csv.txt"
 $utfFile = $inputFile + ".utf8.txt"
