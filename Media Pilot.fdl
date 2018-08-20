@@ -32,10 +32,10 @@
 {!CTRL}
 {ORHER}
   %U,DefaultPath=
-  %I,ImportedTextEncoding=UTF-8
+  %I,ImportedTextEncoding=65001
   %U,StrDel=;
   %I,CommQ=1
-  %U,PreProName=powershell -NoProfile -ExecutionPolicy bypass -File '\\your-root-server\ROOT\IMP_FORMATS\preproc.ps1'
+  %U,PreProName=C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -ExecutionPolicy bypass -Command "\\EUROPA-AIR-GSEL\GSEL_TEST_ROOT\IMP_FORMATS\preproc.ps1"
   %I,EnCrMusBlkOnImport=1
   %I,EnCrNoMusBlkOnImport=1
   %I,CrMusBlkTimeoutSec=300
@@ -97,22 +97,9 @@
 {!ORHER}
 {fields}
   %I,Field0=1
-  %I,Field1=0
-  %I,Field2=0
-  %I,Field3=26
-  %I,Field4=0
-  %I,Field5=0
-  %I,Field6=0
-  %I,Field7=3
-  %I,Field8=0
-  %I,Field9=0
-  %I,Field10=0
-  %I,Field11=0
-  %I,Field12=0
-  %I,Field13=0
-  %I,Field14=0
-  %I,Field15=0
-  %I,Field16=8
-  %I,Field17=4
-  %I,TotalFields=18
+  %I,Field1=26
+  %I,Field2=3
+  %I,Field3=8
+  %I,Field4=4
+  %I,TotalFields=5
 {!fields}
