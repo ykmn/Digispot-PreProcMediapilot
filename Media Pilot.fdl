@@ -35,7 +35,7 @@
   %I,ImportedTextEncoding=65001
   %U,StrDel=;
   %I,CommQ=1
-  %U,PreProName=C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -ExecutionPolicy bypass -Command "\\EUROPA-AIR-GSEL\GSEL_TEST_ROOT\IMP_FORMATS\preproc.ps1"
+  %U,PreProName=C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -ExecutionPolicy bypass -Command "\\-your-root-\ROOT\IMP_FORMATS\preproc.ps1"
   %I,EnCrMusBlkOnImport=1
   %I,EnCrNoMusBlkOnImport=1
   %I,CrMusBlkTimeoutSec=300
