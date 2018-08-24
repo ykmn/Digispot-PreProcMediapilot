@@ -25,6 +25,8 @@
 
 .PARAMETER outputFile
     Filename of ';'-separated table text file for import to DJin.
+.LINK
+    https://github.com/ykmn/Digispot-PreProcMediapilot/blob/master/readme.md
 #>
 
 <#

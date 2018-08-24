@@ -1,5 +1,4 @@
-# preproc
-Препроцессор для модуля Import from text file в Digispot II DJin
+# Препроцессор для модуля Import from text file в Digispot II DJin
 ================================================================
 Roman Ermakov <r.ermakov@emg.fm>
 
