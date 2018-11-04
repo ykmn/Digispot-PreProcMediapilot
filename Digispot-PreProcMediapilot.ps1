@@ -40,7 +40,7 @@ v1.02 2018-08-22 Converting seconds to milliseconds as DJin import requires
 
 
 param (
-# Comment first two lines and uncomment las two lines for command-line test
+# Comment first two lines and uncomment last two lines for command-line test
     [Parameter(Position=0,Mandatory=$true)][string]$inputFile,
     [Parameter(Position=1,Mandatory=$true)][string]$outputFile
     #[Parameter(Position=0)][string]$inputFile = "DF180817.TXT",
@@ -60,8 +60,8 @@ $widths = @(5,     3,   1,   4,         8,   5,   4,   3,         1,   3,     5,
 $inputFile = Get-ChildItem -Path $inputFile
 #$outputFile = $currentdir + "\" + $outputFile
 
-if ($PSVersionTable.PSVersion.Major -le 3) {
-    Write-Host "`n`nThis script requires PowerShell newer than 2.0`nPlease upgrade.`n"
+if ($PSVersionTable.PSVersion.Major -le 5) {
+    Write-Host "`n`nThis script works with PowerShell 5.0 and newer.`nPlease upgrade.`n"
     Break
 }
 
@@ -88,7 +88,7 @@ $array = Import-Csv $csvFile -Delim ';' -Header $headers -Encoding UTF8
 $array = $array | Where-Object { $_.IDnumber -notlike "" }           # Skiping lines with empty IDNo
 
 # SELECT - Select fields for output
-$array = $array | Select-Object Time,IDnumber,Duration,Date,Name              # Selecting meaningful fields
+$array = $array | Select-Object Time,IDnumber,Duration,Date,Name     # Selecting meaningful fields
 $array | ForEach-Object {
         [string]$_.Duration = [int]$_.Duration * 1000                # Making milliseconds from seconds - DJin import requires ms
     } 
