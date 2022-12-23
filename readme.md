@@ -1,13 +1,5 @@
-# Препроцессор для модуля Import from text file в Digispot II DJin
+### Препроцессор для модуля Import from text file в Digispot II DJin
 ================================================================
-Roman Ermakov <r.ermakov@emg.fm>
-
-v1.00 2018-08-18 Initial release
-
-v1.01 2018-08-20 Some fixes. Requre PowerShell >2.0
-
-v1.02 2018-08-22 Converting seconds to milliseconds as DJin import requires
-
 
 Для модуля ["Импорт из текстового файла"][1] требуется текстовый файл в формате CSV. Если генератор музыкального или рекламного расписания выдаёт текстовый файл с полями фиксированной ширины, его необходимо преобразовать в формат с разделителями.
 
@@ -21,6 +13,14 @@ v1.02 2018-08-22 Converting seconds to milliseconds as DJin import requires
 
 Для использования скопируйте `preproc.ps1` и `Media Pliot.fdl` в папку `\ROOT\IMP_FORMATS\` вашего ROOT-сервера или сконфигурируйте новый формат импорта, добавив `C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -ExecutionPolicy bypass -command "\\your-root-server\ROOT\IMP_FORMATS\preproc.ps1"` в параметры модуля.
 
+
+Roman Ermakov <r.ermakov@emg.fm>
+
+v1.00 2018-08-18 Initial release
+
+v1.01 2018-08-20 Some fixes. Requre PowerShell >2.0
+
+v1.02 2018-08-22 Converting seconds to milliseconds as DJin import requires
 
 
 [1]: https://redmine.digispot.ru/projects/digispot/wiki/%D0%98%D0%BC%D0%BF%D0%BE%D1%80%D1%82_%D0%BF%D0%BE_%D0%B8%D0%BC%D0%B5%D0%BD%D0%B8_%D1%84%D0%B0%D0%B9%D0%BB%D0%B0_%D0%B8%D0%B7_%D1%84%D0%B0%D0%B9%D0%BB%D0%BE%D0%B2%D0%BE%D0%B9_%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D1%8B_%D0%B2_%D1%83%D0%B6%D0%B5_%D1%81%D0%BE%D0%B7%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D0%B9_%D1%88%D0%B0%D0%B1%D0%BB%D0%BE%D0%BD
